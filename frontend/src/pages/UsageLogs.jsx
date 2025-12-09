@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usageLogService } from '../services/api';
+import { exportUsageLogsToPDF } from '../services/pdfExport';
 import './UsageLogs.css';
 
 function UsageLogs() {
@@ -34,10 +35,17 @@ function UsageLogs() {
     return <div className="error">{error}</div>;
   }
 
+  const handleExportPDF = () => {
+    exportUsageLogsToPDF(logs);
+  };
+
   return (
     <div className="usage-logs-page">
       <div className="page-header">
         <h1>Usage Logs</h1>
+        <button onClick={handleExportPDF} className="btn btn-export">
+          📄 Export PDF
+        </button>
       </div>
 
       {logs.length === 0 ? (

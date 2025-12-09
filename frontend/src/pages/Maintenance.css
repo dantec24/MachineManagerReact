@@ -2,6 +2,38 @@
   width: 100%;
 }
 
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: #2c3e50;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-export {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-export:hover {
+  background-color: #229954;
+}
+
 .records-table {
   background: white;
   border-radius: 8px;

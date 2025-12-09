@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { maintenanceService } from '../services/api';
+import { exportMaintenanceToPDF } from '../services/pdfExport';
 import './Maintenance.css';
 
 function Maintenance() {
@@ -34,10 +35,17 @@ function Maintenance() {
     return <div className="error">{error}</div>;
   }
 
+  const handleExportPDF = () => {
+    exportMaintenanceToPDF(records);
+  };
+
   return (
     <div className="maintenance-page">
       <div className="page-header">
         <h1>Maintenance Records</h1>
+        <button onClick={handleExportPDF} className="btn btn-export">
+          📄 Export PDF
+        </button>
       </div>
 
       {records.length === 0 ? (

@@ -9,6 +9,12 @@
   margin-bottom: 2rem;
 }
 
+.page-header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .page-header h1 {
   color: #2c3e50;
 }
@@ -119,5 +125,23 @@
 
 .btn-danger:hover {
   background-color: #c0392b;
+}
+
+.btn-export {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-export:hover {
+  background-color: #229954;
+}
+
+.btn-print {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-print:hover {
+  background-color: #2980b9;
 }
 
