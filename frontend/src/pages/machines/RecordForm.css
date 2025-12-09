@@ -1,0 +1,18 @@
+.record-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-subtitle {
+  color: #7f8c8d;
+  margin: 0.5rem 0;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 0.25rem;
+  color: #7f8c8d;
+  font-size: 0.875rem;
+}
+
